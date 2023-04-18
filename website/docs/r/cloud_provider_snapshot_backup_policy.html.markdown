@@ -14,6 +14,8 @@ description: |-
 
 -> **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
+-> **NOTE:** If you enable a Backup Compliance Policy, no user, regardless of role, can disable the Backup Compliance Policy without contacting MongoDB support, delete a backup snapshot, decrease the retention time for a snapshot after it's taken, disable Cloud Backup, modify the backup policy for an individual cluster below the minimum requirements set in the Backup Compliance Policy, or delete the Atlas project if any snapshots exist. For more details see (Backup Compliance Policy Prohibited Actions and Considerations)[https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/#configure-a-backup-compliance-policy]. 
+
 # Examples - Modifying Polices
 When Cloud Backup is enabled for a cluster MongoDB Atlas automatically creates a default Cloud Backup schedule for the cluster with four policy items; hourly, daily, weekly, and monthly. Because of this default creation this provider automatically saves the Cloud Backup Snapshot Policy into the Terraform state when a cluster is created/modified to use Cloud Backup. If the default works well for you then you do not need to do anything other than create a cluster with Cloud Backup enabled and your Terraform state will have this information if you need it. However, if you want the policy to be different than the default we've provided some examples to help below.
 

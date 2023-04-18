@@ -17,6 +17,8 @@ More information on considerations for using advanced clusters please see [Consi
 
 -> **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
+-> **NOTE:** If you enable a Backup Compliance Policy, no user, regardless of role, can disable the Backup Compliance Policy without contacting MongoDB support, delete a backup snapshot, decrease the retention time for a snapshot after it's taken, disable Cloud Backup, modify the backup policy for an individual cluster below the minimum requirements set in the Backup Compliance Policy, or delete the Atlas project if any snapshots exist. For more details see (Backup Compliance Policy Prohibited Actions and Considerations)[https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/#configure-a-backup-compliance-policy]. 
+
 -> **NOTE:** A network container is created for a advanced cluster to reside in if one does not yet exist in the project.  To  use this automatically created container with another resource, such as peering, the `container_id` is exported after creation.
 
 ## Example Usage
